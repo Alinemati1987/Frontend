@@ -37,5 +37,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This is a simple react/redux/jwt template to start a project quickly",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alinemati1987/Frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alinemati1987/Frontend/issues"
+  },
+  "homepage": "https://github.com/Alinemati1987/Frontend#readme"
 }
