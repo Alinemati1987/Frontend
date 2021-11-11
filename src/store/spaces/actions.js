@@ -28,8 +28,8 @@ export const fetchSpaces = () => {
 export const fetchSpaceById = (id) => {
   return async (dispatch, getState) => {
     const response = await axios.get(`${apiUrl}/spaces/${id}`);
-    console.log(response);
-    dispatch(spaceDetailsFetched(response.data.space));
+    console.log("fetchDetails res is:", response.data);
+    dispatch(spaceDetailsFetched(response.data));
   };
 };
 

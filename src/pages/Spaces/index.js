@@ -10,7 +10,7 @@ export default function Spaces() {
   const dispatch = useDispatch();
   const spaces = useSelector(selectSpaces);
 
-  console.log("spaces are:", spaces);
+  // console.log("spaces are:", spaces);
 
   useEffect(() => {
     dispatch(fetchSpaces());

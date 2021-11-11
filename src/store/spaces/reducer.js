@@ -9,12 +9,12 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_SPACES_SUCCESS:
-      console.log("Action is:", action);
-
+      // console.log("Action is:", action);
       return {
         ...state,
         allSpaces: [...action.payload.spaces.rows],
       };
+
     // case SPACE_UPDATED: {
     //   return {
     //     ...state,
@@ -27,8 +27,21 @@ export default function reducer(state = initialState, action) {
     //     }),
     //   };
     // }
-    // case SPACE_DETAILS_FETCHED:
-    //   return { ...state, spaceDetails: { ...action.payload } };
+
+    case SPACE_DETAILS_FETCHED:
+      console.log("Action is:", action);
+
+      return {
+        ...state,
+        spaceDetails: [...state],
+        // // map((space) => {
+        //   if (space.id === action.payload.specificSpace.id) {
+        //     console.log("space is",space)
+        //     return space;
+        //   }
+        //   // return {stories: [...action.payload.specificSpace.stories] };
+        // }),
+      };
     default:
       return state;
   }
