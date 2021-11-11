@@ -18,6 +18,7 @@ export default function StoryCarousel(props) {
           <Carousel.Item key={story.id}>
             {story.imageUrl ? (
               <img
+                style={{ borderRadius: "15px" }}
                 className="d-block w-100"
                 src={story.imageUrl}
                 alt={story.name}
@@ -25,8 +26,9 @@ export default function StoryCarousel(props) {
             ) : null}
             <Carousel.Caption
               style={{
-                backgroundColor: `${props.space.backgroundColor}99`,
+                backgroundColor: `${props.space.backgroundColor}85`,
                 color: props.space.color,
+                borderRadius: "25px",
               }}
               className="p-5"
             >

@@ -9,9 +9,10 @@ export default function Space(props) {
       style={{
         backgroundColor: props.backgroundColor,
         color: props.color,
-        margin: "10px",
-        padding: "20px",
-        boxShadow: " 5px 5px darkkhaki",
+        margin: "20px",
+        padding: "25px",
+        boxShadow: " 5px 3px 5px lightblue , 3px 3px 3px grey",
+        borderRadius: "30px",
       }}
     >
       <h1>{props.title}</h1>

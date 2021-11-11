@@ -20,7 +20,7 @@ export default function SpaceDetails() {
     dispatch(fetchSpaceById(parseInt(id)));
   }, []);
 
-  if (!space) return <Loading />;
+  if (!space || parseInt(space.id) !== parseInt(id)) return <Loading />;
 
   return (
     <div>
