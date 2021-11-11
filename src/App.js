@@ -40,8 +40,8 @@ function App() {
       <MessageBox />
       {isLoading ? <Loading /> : null}
       <Switch>
-        {/* <Route exact path="/" component={Spaces} /> */}
-        {/* <Route path="/spaces/:id" component={SpaceDetails} /> */}
+        <Route exact path="/" component={Spaces} />
+        <Route path="/spaces/:id" component={SpaceDetails} />
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={Login} />
       </Switch>

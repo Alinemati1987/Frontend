@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import Space from "../../components/Space";
-// import StoryCarousel from "../../components/StoryCarousel";
+import StoryCarousel from "../../components/StoryCarousel";
 import Container from "react-bootstrap/Container";
 import Loading from "../../components/Loading";
 import { fetchSpaceById } from "../../store/spaces/actions";
@@ -20,7 +20,7 @@ export default function SpaceDetails() {
     dispatch(fetchSpaceById(parseInt(id)));
   }, []);
 
-  if (!space || parseInt(space.id) !== parseInt(id)) return <Loading />;
+  if (!space) return <Loading />;
 
   return (
     <div>
@@ -33,8 +33,7 @@ export default function SpaceDetails() {
         showLink={false}
       />
       <Container>
-        {space}
-        {/* <StoryCarousel space={space} /> */}
+        <StoryCarousel space={space} />
       </Container>
     </div>
   );

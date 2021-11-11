@@ -33,14 +33,7 @@ export default function reducer(state = initialState, action) {
 
       return {
         ...state,
-        spaceDetails: [...state],
-        // // map((space) => {
-        //   if (space.id === action.payload.specificSpace.id) {
-        //     console.log("space is",space)
-        //     return space;
-        //   }
-        //   // return {stories: [...action.payload.specificSpace.stories] };
-        // }),
+        spaceDetails: action.payload.specificSpace,
       };
     default:
       return state;
